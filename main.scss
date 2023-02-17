@@ -1,0 +1,96 @@
+@import "header";
+@import "variables";
+@import "color";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+//content
+.hero{
+    background-color: rgb(243, 221, 189);
+
+    &-conteiner{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        height:90vh ;
+        width: 100%;
+        padding: 0 20px;
+        overflow: hidden;
+
+        @include tablet{
+            grid-template-columns: 1fr;
+            height: 100%;
+            
+
+    }
+    &-left{
+        width: 100%;
+        line-height: 1.2;
+        @include tablet{
+            padding: 5rem;
+        }
+        @include mobile{
+            line-height: 1.5;
+        }
+    }
+    &-left h1{
+        font-size: 4rem;
+        color: $blue;
+        @include mobile{
+            font-size: 1.5rem;
+        }
+    }
+    &-left h2{
+        font-size: 3rem;
+        color: rgb(180, 121, 10);
+        @include mobile{
+            font-size:2rem ;
+        }
+    }
+    &-left p{
+        font-size:2rem ;
+        color: $dark;
+        padding: 5px;
+        a{
+            border: none;
+            background-color: $lime;
+            margin-top: 5px;
+            padding: 5px 15px;
+            border-radius: 3px;
+            transition: all 0.3s;
+            text-decoration: none;
+            
+            z-index: 2;
+            &:hover{
+                background-color: rgb(20, 122, 182);
+            }
+        }
+    }
+    &-right{
+        img{
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+
+
+        
+    }
+   
+    }
+    
+}
+footer{
+    background-color: antiquewhite;
+    text-align: center;
+}
+
+

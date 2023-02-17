@@ -1,0 +1,87 @@
+@import "variables";
+@import "color";
+
+
+%align-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar {
+    background-color:rgb(214, 205, 205);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0.7,0.7,0.7);
+
+    &-logo {
+        color: $dark;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 2rem;
+        margin-left: 20px;
+        @extend %align-center;
+    }
+
+    &-bars {
+        opacity: 0;
+
+        @include tablet{
+            color: $dark;
+            opacity: 1;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+        }
+
+
+    }
+
+    &-menu{
+       @extend %align-center;
+       text-align: center;
+       margin-right: 20px;
+
+       @include tablet{
+        display: none;
+        
+       }
+       ul{
+        list-style:none;
+        @extend %align-center;
+        justify-content: center;
+        
+       }
+       
+       &-links{
+        color:$dark;
+        
+        text-decoration: none;
+        padding:10px;
+
+        &:hover{
+            color:$blue;
+            transition: all 0.3s ease;
+
+        }
+
+    }
+
+    
+    }
+    
+
+}
+#btn{
+    padding:10px 20px ;
+    background-color:$blue;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px 30px;
+    border-radius:3px;
+
+}
